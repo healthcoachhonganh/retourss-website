@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { AudioSignupForm } from "@/components/forms";
-import { PlaceholderImage, SectionHeading } from "@/components/ui";
+import { FeatureImage, SectionHeading } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Audio thư giãn miễn phí",
@@ -21,7 +21,12 @@ export default function FreeAudioPage() {
             <AudioSignupForm />
           </div>
         </div>
-        <PlaceholderImage label="Placeholder ảnh: tai nghe, chăn mềm, ánh sáng ấm, không gian nghỉ ngơi yên tĩnh." />
+        <FeatureImage
+          src="/free-audio-relaxation.jpg"
+          alt="Một người thực hành nghỉ ngơi sâu trong không gian ấm áp"
+          caption="Một thực hành nghỉ ngơi sâu để cơ thể có thể hạ nhịp và phục hồi."
+          position="center 55%"
+        />
       </div>
     </section>
   );
