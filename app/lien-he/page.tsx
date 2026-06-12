@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactForm } from "@/components/forms";
 import { SectionHeading, TextCard } from "@/components/ui";
 import { site } from "@/data/site";
 
@@ -16,10 +17,13 @@ export default function ContactPage() {
           title="Bạn có thể bắt đầu bằng một tin nhắn rất ngắn."
           body="Hãy chia sẻ tình trạng hiện tại, điều bạn đang mong muốn và thời điểm bạn muốn bắt đầu."
         />
-        <TextCard
-          title="Retour"
-          body={`Zalo: ${site.zalo}. Facebook: ${site.facebook}. Email: ${site.contactEmail}.`}
-        />
+        <div className="grid gap-5">
+          <TextCard
+            title="Retour"
+            body={`Zalo: ${site.zalo}. Facebook: ${site.facebook}. Email: ${site.contactEmail}.`}
+          />
+          <ContactForm />
+        </div>
       </div>
     </section>
   );
