@@ -3,7 +3,7 @@ export const site = {
   domain: "https://retourss.vn",
   description:
     "Retour giúp những người đang quá tải tìm lại giấc ngủ, sự bình tĩnh và năng lượng sống thông qua hơi thở, cơ thể và nghỉ ngơi sâu.",
-  cta: "Đánh giá mức độ hồi phục",
+  cta: "Đánh giá nhu cầu hồi phục",
   contactEmail: "hello@retourss.vn"
 };
 
@@ -20,7 +20,7 @@ export const mainNav = [
 
 export const startLinks = [
   {
-    title: "Đánh giá mức độ hồi phục hệ thần kinh",
+    title: "Đánh giá nhu cầu hồi phục hệ thần kinh",
     description: "Một bài tự nhìn lại trong 3 phút để biết cơ thể đang cần được nâng đỡ ở mức nào.",
     href: "/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc"
   },

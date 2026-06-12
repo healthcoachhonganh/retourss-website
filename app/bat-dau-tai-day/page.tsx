@@ -5,7 +5,7 @@ import { startLinks } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Bắt đầu tại đây",
-  description: "Làm bài đánh giá mức độ hồi phục hoặc nhận audio thư giãn miễn phí từ Retour."
+  description: "Làm bài đánh giá nhu cầu hồi phục hoặc nhận audio thư giãn miễn phí từ Retour."
 };
 
 export default function StartHerePage() {

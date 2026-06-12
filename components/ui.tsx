@@ -56,7 +56,7 @@ export function Footer() {
         <div>
           <p className="font-medium">Bắt đầu</p>
           <div className="mt-4 grid gap-3 text-sm text-ivory/75">
-            <Link href="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc">Đánh giá mức độ hồi phục</Link>
+            <Link href="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc">Đánh giá nhu cầu hồi phục</Link>
             <Link href="/bat-dau-tai-day/audio-thu-gian-mien-phi">Audio thư giãn miễn phí</Link>
             <Link href="/lien-he">Liên hệ</Link>
           </div>
