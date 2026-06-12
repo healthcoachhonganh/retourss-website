@@ -14,7 +14,7 @@ export default function ContactPage() {
       <div className="container-soft grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <SectionHeading
           eyebrow="Liên hệ"
-          title="Bạn có thể bắt đầu bằng một tin nhắn rất ngắn."
+          title="Kết nối với tụi mình để nhận sự hỗ trợ sớm nhất."
           body="Hãy chia sẻ tình trạng hiện tại, điều bạn đang mong muốn và thời điểm bạn muốn bắt đầu."
         />
         <div className="grid gap-5">
