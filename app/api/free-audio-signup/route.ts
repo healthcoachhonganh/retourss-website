@@ -64,17 +64,17 @@ export async function POST(request: Request) {
     });
 
     const extraLines = [
-      phone ? `Phone: ${phone}` : "",
-      share ? `Share: ${share}` : "",
-      currentState ? `Current state: ${currentState}` : "",
-      goal ? `Goal after program: ${goal}` : ""
+      phone ? `Số điện thoại: ${phone}` : "",
+      share ? `Chia sẻ: ${share}` : "",
+      currentState ? `Tình trạng hiện tại: ${currentState}` : "",
+      goal ? `Mong muốn sau chương trình: ${goal}` : ""
     ].filter(Boolean);
 
     const extraHtml = [
-      phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : "",
-      share ? `<p><strong>Share:</strong> ${escapeHtml(share)}</p>` : "",
-      currentState ? `<p><strong>Current state:</strong> ${escapeHtml(currentState)}</p>` : "",
-      goal ? `<p><strong>Goal after program:</strong> ${escapeHtml(goal)}</p>` : ""
+      phone ? `<p><strong>Số điện thoại:</strong> ${escapeHtml(phone)}</p>` : "",
+      share ? `<p><strong>Chia sẻ:</strong> ${escapeHtml(share)}</p>` : "",
+      currentState ? `<p><strong>Tình trạng hiện tại:</strong> ${escapeHtml(currentState)}</p>` : "",
+      goal ? `<p><strong>Mong muốn sau chương trình:</strong> ${escapeHtml(goal)}</p>` : ""
     ].join("");
 
     await transporter.sendMail({
