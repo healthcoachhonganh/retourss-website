@@ -16,7 +16,10 @@ export default function ContactPage() {
           title="Bạn có thể bắt đầu bằng một tin nhắn rất ngắn."
           body="Hãy chia sẻ tình trạng hiện tại, điều bạn đang mong muốn và thời điểm bạn muốn bắt đầu."
         />
-        <TextCard title="Retour" body={`Email: ${site.contactEmail}. Địa điểm thực hành và tư vấn: Sóc Sơn, Hà Nội hoặc trực tuyến tùy chương trình.`} />
+        <TextCard
+          title="Retour"
+          body={`Zalo: ${site.zalo}. Facebook: ${site.facebook}. Email: ${site.contactEmail}.`}
+        />
       </div>
     </section>
   );

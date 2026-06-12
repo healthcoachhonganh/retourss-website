@@ -4,7 +4,9 @@ export const site = {
   description:
     "Retour giúp những người đang quá tải tìm lại giấc ngủ, sự bình tĩnh và năng lượng sống thông qua hơi thở, cơ thể và nghỉ ngơi sâu.",
   cta: "Đánh giá nhu cầu hồi phục",
-  contactEmail: "hello@retourss.vn"
+  contactEmail: "retourss.com@gmail.com",
+  zalo: "0949.341.863",
+  facebook: "https://web.facebook.com/honganh.retour"
 };
 
 export const mainNav = [
