@@ -26,9 +26,9 @@ export default function AboutRetourPage() {
       </section>
       <section className="section-pad bg-white/45">
         <div className="container-soft grid gap-5 md:grid-cols-3">
-          <TextCard title="Triết lý của Retour" body="Hồi phục bắt đầu khi cơ thể cảm thấy đủ an toàn để buông bớt phòng vệ. Vì vậy, chúng tôi chọn sự chậm rãi, rõ ràng và thực tế." />
-          <TextCard title="Vì sao Retour ra đời" body="Retour ra đời từ trải nghiệm kiệt sức, mất ngủ và hành trình học cách chăm sóc bản thân bằng hơi thở, cơ thể, nghỉ ngơi sâu." />
-          <TextCard title="Ý nghĩa của từ Retour" body="Retour nghĩa là trở về. Trở về với nhịp tự nhiên, với cảm nhận thân thể và với phần mình không cần phải cố thêm nữa." />
+          <TextCard title="Triết lý của Retour" body="Con người vốn đã có khả năng tự hồi phục khi được trở về đúng nhịp của mình." />
+          <TextCard title="Vì sao Retour ra đời" body="Retour ra đời từ trải nghiệm kiệt sức, mất ngủ và hành trình học cách tự chăm sóc và hồi phục tự nhiên thông qua hơi thở, cơ thể và nghỉ ngơi sâu." />
+          <TextCard title="Ý nghĩa của từ Retour" body="Retour nghĩa là trở về, trở về với nhịp tự nhiên, với tiến trình hồi phục trong sự tả lỏng và thư giãn." />
         </div>
       </section>
     </>
