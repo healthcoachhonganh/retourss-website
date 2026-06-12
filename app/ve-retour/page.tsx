@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FeatureImage, SectionHeading, TextCard } from "@/components/ui";
+import { FeatureImage, TextCard } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Về Retour",
@@ -11,11 +11,23 @@ export default function AboutRetourPage() {
     <>
       <section className="section-pad bg-ivory">
         <div className="container-soft grid items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
-          <SectionHeading
-            eyebrow="Về Retour"
-            title='"Retour" trong tiếng Pháp có nghĩa là Trở về. Trở về với chính mình để chăm sóc và hồi phục tự nhiên.'
-            body="Retour được tạo ra để hướng dẫn người khác tìm được đường trở về với chính mình để sống trọn vẹn cuộc đời mình"
-          />
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-medium text-clay">Về Retour</p>
+            <div className="space-y-5 text-earth">
+              <h1 className="font-serif text-2xl font-medium leading-[1.45] text-forest md:text-[2.15rem]">
+                Retour là hành trình trở về với cơ thể, hơi thở và nhịp sống tự nhiên của chính mình.
+              </h1>
+              <p className="text-base leading-8 md:text-lg">
+                Chúng tôi tin rằng con người vốn có khả năng tự hồi phục khi hệ thần kinh được điều hòa, cơ thể được nghỉ ngơi và tâm trí được lắng dịu.
+              </p>
+              <p className="text-base leading-8 md:text-lg">
+                Thông qua Yoga hồi phục, thư giãn sâu và những thực hành đơn giản hằng ngày, Retour giúp những ai đang làm việc cường độ cao hồi phục năng lượng, thiết lập trạng thái cân bằng và bình an từ bên trong.
+              </p>
+            </div>
+            <p className="mt-6 text-lg leading-8 text-earth">
+              Retour được tạo ra để hướng dẫn người khác tìm được đường trở về với chính mình để sống trọn vẹn cuộc đời mình
+            </p>
+          </div>
           <FeatureImage
             src="/about-retour-practice.jpg"
             alt="Thực hành hơi thở và thiền trên bãi biển"
