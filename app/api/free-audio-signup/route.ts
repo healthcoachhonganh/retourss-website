@@ -25,6 +25,7 @@ export async function POST(request: Request) {
       phone?: string;
       currentState?: string;
       goal?: string;
+      share?: string;
       formType?: "audio" | "contact" | "consultation";
     };
     const name = body.name?.trim();
@@ -32,6 +33,7 @@ export async function POST(request: Request) {
     const phone = body.phone?.trim();
     const currentState = body.currentState?.trim();
     const goal = body.goal?.trim();
+    const share = body.share?.trim();
     const formType = body.formType || "audio";
 
     if (!name || !email) {
@@ -63,12 +65,14 @@ export async function POST(request: Request) {
 
     const extraLines = [
       phone ? `Phone: ${phone}` : "",
+      share ? `Share: ${share}` : "",
       currentState ? `Current state: ${currentState}` : "",
       goal ? `Goal after program: ${goal}` : ""
     ].filter(Boolean);
 
     const extraHtml = [
       phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : "",
+      share ? `<p><strong>Share:</strong> ${escapeHtml(share)}</p>` : "",
       currentState ? `<p><strong>Current state:</strong> ${escapeHtml(currentState)}</p>` : "",
       goal ? `<p><strong>Goal after program:</strong> ${escapeHtml(goal)}</p>` : ""
     ].join("");

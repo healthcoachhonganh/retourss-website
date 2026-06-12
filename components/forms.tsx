@@ -19,6 +19,7 @@ function useLeadForm(formType: "audio" | "contact" | "consultation") {
     const phone = String(formData.get("phone") || "");
     const currentState = String(formData.get("currentState") || "");
     const goal = String(formData.get("goal") || "");
+    const share = String(formData.get("share") || "");
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 60000);
 
@@ -26,7 +27,7 @@ function useLeadForm(formType: "audio" | "contact" | "consultation") {
       const response = await fetch("/api/free-audio-signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, currentState, goal, formType }),
+        body: JSON.stringify({ name, email, phone, currentState, goal, share, formType }),
         signal: controller.signal
       });
 
@@ -75,6 +76,10 @@ export function AudioSignupForm() {
       <label className="grid gap-2 text-sm text-forest">
         Email
         <input required className="rounded-md border border-forest/15 bg-ivory px-4 py-3 outline-none focus:border-moss" name="email" type="email" />
+      </label>
+      <label className="grid gap-2 text-sm text-forest">
+        Chia sẻ
+        <textarea className="min-h-28 rounded-md border border-forest/15 bg-ivory px-4 py-3 outline-none focus:border-moss" name="share" />
       </label>
       <FormMessage status={status} message={message} />
       <button disabled={status === "submitting"} type="submit" className="rounded-full bg-forest px-6 py-3 font-medium text-ivory transition hover:bg-moss disabled:cursor-not-allowed disabled:opacity-70">
