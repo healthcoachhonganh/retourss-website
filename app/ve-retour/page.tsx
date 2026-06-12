@@ -13,7 +13,7 @@ export default function AboutRetourPage() {
         <div className="container-soft grid items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
           <SectionHeading
             eyebrow="Về Retour"
-            title="Trở về với một cơ thể biết nghỉ, biết thở và biết hồi phục."
+            title='"Retour" trong tiếng Pháp có nghĩa là Trở về. Trở về với chính mình để chăm sóc và hồi phục tự nhiên.'
             body="Retour được tạo ra cho những giai đoạn con người vẫn phải tiếp tục sống, làm việc và chăm sóc người khác trong khi bên trong đã quá tải."
           />
           <FeatureImage
