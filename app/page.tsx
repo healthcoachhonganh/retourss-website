@@ -9,7 +9,7 @@ export default function HomePage() {
           <div>
             <p className="mb-5 text-sm font-medium text-clay">Retour</p>
             <h1 className="text-balance font-serif text-5xl font-medium leading-[1.16] text-forest md:text-[3.85rem]">
-              Hồi phục hệ thần kinh trong những giai đoạn áp lực nhất của cuộc sống.
+              Điều hòa hệ thần kinh, ngủ sâu & tái tạo năng lượng thông qua Yoga hồi phục.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-earth">
               Dành cho những người vẫn phải tiếp tục làm việc, chăm sóc gia đình và đưa ra quyết định mỗi ngày

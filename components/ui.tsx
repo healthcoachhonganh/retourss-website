@@ -50,7 +50,7 @@ export function Footer() {
         <div>
           <p className="font-serif text-3xl font-medium">Retour</p>
           <p className="mt-4 max-w-md text-sm leading-7 text-ivory/75">
-            Hồi phục hệ thần kinh trong những giai đoạn áp lực nhất của cuộc sống.
+            Điều hòa hệ thần kinh, ngủ sâu & tái tạo năng lượng thông qua Yoga hồi phục.
           </p>
         </div>
         <div>
