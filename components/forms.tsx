@@ -16,23 +16,33 @@ function useLeadForm() {
     const formData = new FormData(event.currentTarget);
     const name = String(formData.get("name") || "");
     const email = String(formData.get("email") || "");
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 20000);
 
-    const response = await fetch("/api/free-audio-signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email })
-    });
+    try {
+      const response = await fetch("/api/free-audio-signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+        signal: controller.signal
+      });
 
-    if (!response.ok) {
-      const data = (await response.json().catch(() => null)) as { message?: string } | null;
+      if (!response.ok) {
+        const data = (await response.json().catch(() => null)) as { message?: string } | null;
+        setStatus("error");
+        setMessage(data?.message || "Chưa gửi được thông tin. Bạn vui lòng thử lại sau.");
+        return;
+      }
+
+      event.currentTarget.reset();
+      setStatus("success");
+      setMessage("Cảm ơn bạn. Retour đã nhận thông tin và sẽ gửi audio tới email của bạn.");
+    } catch {
       setStatus("error");
-      setMessage(data?.message || "Chưa gửi được thông tin. Bạn vui lòng thử lại sau.");
-      return;
+      setMessage("Kết nối gửi form mất quá lâu. Bạn vui lòng thử lại hoặc liên hệ qua Zalo 0949.341.863.");
+    } finally {
+      window.clearTimeout(timeout);
     }
-
-    event.currentTarget.reset();
-    setStatus("success");
-    setMessage("Cảm ơn bạn. Retour đã nhận thông tin và sẽ gửi audio tới email của bạn.");
   }
 
   return { status, message, submit };
