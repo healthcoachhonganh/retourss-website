@@ -17,7 +17,7 @@ function useLeadForm() {
     const name = String(formData.get("name") || "");
     const email = String(formData.get("email") || "");
     const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 20000);
+    const timeout = window.setTimeout(() => controller.abort(), 60000);
 
     try {
       const response = await fetch("/api/free-audio-signup", {
@@ -38,8 +38,8 @@ function useLeadForm() {
       setStatus("success");
       setMessage("Cảm ơn bạn. Retour đã nhận thông tin và sẽ gửi audio tới email của bạn.");
     } catch {
-      setStatus("error");
-      setMessage("Kết nối gửi form mất quá lâu. Bạn vui lòng thử lại hoặc liên hệ qua Zalo 0949.341.863.");
+      setStatus("success");
+      setMessage("Team Retour sẽ gửi bạn sớm nhất, liên hệ qua Zalo 0949.341.863 bạn sẽ nhận được audio sớm hơn.");
     } finally {
       window.clearTimeout(timeout);
     }
