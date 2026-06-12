@@ -42,7 +42,7 @@ function useLeadForm(formType: "audio" | "contact" | "consultation") {
       setMessage("Cảm ơn bạn. Retour đã nhận thông tin và sẽ gửi audio tới email của bạn.");
     } catch {
       setStatus("success");
-      setMessage("Team Retour sẽ gửi bạn sớm nhất, liên hệ qua Zalo 0949.341.863 bạn sẽ nhận được audio sớm hơn.");
+      setMessage("Team Retour sẽ phản hồi bạn sớm nhất, liên hệ qua Zalo 0949.341.863 bạn sẽ nhận được phản hồi sớm hơn.");
     } finally {
       window.clearTimeout(timeout);
     }
