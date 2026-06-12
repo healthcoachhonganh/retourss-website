@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
-function useLeadForm() {
+function useLeadForm(formType: "audio" | "contact" | "consultation") {
   const [status, setStatus] = useState<SubmitState>("idle");
   const [message, setMessage] = useState("");
 
@@ -16,6 +16,9 @@ function useLeadForm() {
     const formData = new FormData(event.currentTarget);
     const name = String(formData.get("name") || "");
     const email = String(formData.get("email") || "");
+    const phone = String(formData.get("phone") || "");
+    const currentState = String(formData.get("currentState") || "");
+    const goal = String(formData.get("goal") || "");
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 60000);
 
@@ -23,7 +26,7 @@ function useLeadForm() {
       const response = await fetch("/api/free-audio-signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ name, email, phone, currentState, goal, formType }),
         signal: controller.signal
       });
 
@@ -61,7 +64,7 @@ function FormMessage({ status, message }: { status: SubmitState; message: string
 }
 
 export function AudioSignupForm() {
-  const { status, message, submit } = useLeadForm();
+  const { status, message, submit } = useLeadForm("audio");
 
   return (
     <form onSubmit={submit} className="grid gap-4 rounded-lg border border-forest/10 bg-white/55 p-6 shadow-soft">
@@ -82,7 +85,7 @@ export function AudioSignupForm() {
 }
 
 export function ContactForm() {
-  const { status, message, submit } = useLeadForm();
+  const { status, message, submit } = useLeadForm("contact");
 
   return (
     <form onSubmit={submit} className="grid gap-4 rounded-lg border border-forest/10 bg-white/55 p-6 shadow-soft">
@@ -103,7 +106,7 @@ export function ContactForm() {
 }
 
 export function ConsultationForm() {
-  const { status, message, submit } = useLeadForm();
+  const { status, message, submit } = useLeadForm("consultation");
 
   return (
     <form onSubmit={submit} className="grid gap-4 rounded-lg border border-forest/10 bg-white/55 p-6 shadow-soft">

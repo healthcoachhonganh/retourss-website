@@ -2,6 +2,11 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 const emailTo = "retourss.com@gmail.com";
+const subjects = {
+  audio: "[Retour] Đăng ký Audio miễn phí",
+  contact: "[Retour] Liên hệ từ website",
+  consultation: "[Retour] Đăng ký tư vấn chương trình"
+};
 
 function escapeHtml(value: string) {
   return value
@@ -14,9 +19,20 @@ function escapeHtml(value: string) {
 
 export async function POST(request: Request) {
   try {
-    const body = (await request.json()) as { name?: string; email?: string };
+    const body = (await request.json()) as {
+      name?: string;
+      email?: string;
+      phone?: string;
+      currentState?: string;
+      goal?: string;
+      formType?: "audio" | "contact" | "consultation";
+    };
     const name = body.name?.trim();
     const email = body.email?.trim();
+    const phone = body.phone?.trim();
+    const currentState = body.currentState?.trim();
+    const goal = body.goal?.trim();
+    const formType = body.formType || "audio";
 
     if (!name || !email) {
       return NextResponse.json({ message: "Vui lòng nhập họ tên và email." }, { status: 400 });
@@ -45,16 +61,29 @@ export async function POST(request: Request) {
       }
     });
 
+    const extraLines = [
+      phone ? `Phone: ${phone}` : "",
+      currentState ? `Current state: ${currentState}` : "",
+      goal ? `Goal after program: ${goal}` : ""
+    ].filter(Boolean);
+
+    const extraHtml = [
+      phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : "",
+      currentState ? `<p><strong>Current state:</strong> ${escapeHtml(currentState)}</p>` : "",
+      goal ? `<p><strong>Goal after program:</strong> ${escapeHtml(goal)}</p>` : ""
+    ].join("");
+
     await transporter.sendMail({
       from: process.env.EMAIL_FROM || smtpUser,
       to: emailTo,
       replyTo: email,
-      subject: "[Retour] Đăng ký Audio miễn phí",
-      text: [`Full name: ${name}`, `Email: ${email}`, `Submission date: ${submittedAt}`].join("\n"),
+      subject: subjects[formType],
+      text: [`Full name: ${name}`, `Email: ${email}`, ...extraLines, `Submission date: ${submittedAt}`].join("\n"),
       html: `
         <div>
           <p><strong>Full name:</strong> ${escapeHtml(name)}</p>
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          ${extraHtml}
           <p><strong>Submission date:</strong> ${submittedAt}</p>
         </div>
       `
