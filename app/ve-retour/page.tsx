@@ -14,7 +14,7 @@ export default function AboutRetourPage() {
           <SectionHeading
             eyebrow="Về Retour"
             title='"Retour" trong tiếng Pháp có nghĩa là Trở về. Trở về với chính mình để chăm sóc và hồi phục tự nhiên.'
-            body="Retour được tạo ra để dẫn người khác tìm được đường về nhà của họ"
+            body="Retour được tạo ra để hướng dẫn người khác tìm được đường trở về với chính mình để sống trọn vẹn cuộc đời mình"
           />
           <FeatureImage
             src="/about-retour-practice.jpg"
