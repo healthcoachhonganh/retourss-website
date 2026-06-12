@@ -12,8 +12,7 @@ export default function HomePage() {
               Điều hòa hệ thần kinh, ngủ sâu & tái tạo năng lượng thông qua Yoga hồi phục.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-earth">
-              Dành cho những người vẫn phải tiếp tục làm việc, chăm sóc gia đình và đưa ra quyết định mỗi ngày
-              , dù cơ thể đã bắt đầu lên tiếng.
+              Dành cho những ai đang chịu áp lực kéo dài và có dấu hiệu quá tải về thể chất, tinh thần hoặc giấc ngủ.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <CtaLink href="/hanh-trinh-hoi-phuc">Tìm hiểu chương trình</CtaLink>
