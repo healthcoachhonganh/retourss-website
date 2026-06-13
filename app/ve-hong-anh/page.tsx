@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FeatureImage, SectionHeading, TextCard } from "@/components/ui";
+import { FeatureImage, TextCard } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Về Hồng Anh",
@@ -17,11 +17,27 @@ export default function HongAnhPage() {
             caption="Không gian thực hành và làm việc của Hồng Anh trong đời sống gần thiên nhiên."
             position="center 42%"
           />
-          <SectionHeading
-            eyebrow="Về Hồng Anh"
-            title="Tôi chọn công việc này vì hiểu cảm giác cơ thể đã mệt nhưng cuộc sống vẫn đòi mình tiếp tục."
-            body="Từ giai đoạn kiệt sức, mất ngủ và mất phương hướng, Hồng Anh đi qua một hành trình học lại cách chăm sóc bản thân bằng những thực hành tự nhiên, chậm rãi và bền vững."
-          />
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-medium text-clay">Về Hồng Anh</p>
+            <h1 className="text-balance font-serif text-4xl font-medium leading-[1.18] text-forest md:text-[3.2rem]">
+              Thành công không cần đánh đổi bằng sức khỏe.
+            </h1>
+            <div className="mt-6 space-y-5 leading-8 text-earth">
+              <p>Mình tin rằng sức khỏe không phải là phần thưởng sau thành công.</p>
+              <p>Sức khỏe là nền tảng để một người có thể sống, làm việc và cống hiến một cách bền vững.</p>
+              <p>
+                Nhưng nhiều người chỉ nhận ra điều đó khi cơ thể bắt đầu lên tiếng: khó ngủ, kiệt sức, mất năng
+                lượng hoặc cảm thấy lạc hướng giữa guồng quay công việc và cuộc sống.
+              </p>
+              <p>Mình cũng từng ở đó.</p>
+              <p>
+                Hành trình học Yoga, dinh dưỡng tích hợp, thiền định và đời sống gần thiên nhiên giúp mình nhận ra
+                rằng sự hồi phục không bắt đầu từ việc cố gắng nhiều hơn, mà từ việc biết dừng lại, lắng nghe cơ thể và
+                trở về với những điều đơn giản nhất.
+              </p>
+              <p>Retour ra đời từ hành trình đó.</p>
+            </div>
+          </div>
         </div>
       </section>
       <section className="section-pad bg-white/45">
