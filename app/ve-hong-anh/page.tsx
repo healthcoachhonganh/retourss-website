@@ -62,8 +62,20 @@ Nhưng điều quan trọng nhất không phải là số lượng chứng chỉ
 
 Điều quan trọng là những kiến thức đó đã được thể nghiệm qua tiến trình hồi phục tự nhiên của chính mình và hàng trăm giờ đồng hành cùng nhiều học viên.`}
           />
-          <TextCard title="Cuộc sống tại Sóc Sơn" body="Đời sống gần thiên nhiên, nông nghiệp sinh thái và nhịp sống giản dị giúp Hồng Anh tiếp tục thực hành điều mình chia sẻ." />
-          <TextCard title="Vì sao tôi chọn công việc này" body="Vì rất nhiều người không cần bị thúc phải mạnh mẽ hơn. Họ cần một nơi đủ an toàn để cơ thể được hồi phục." />
+          <TextCard
+            title="Cuộc sống tại Sóc Sơn"
+            body={`Hiện tại mình sống tại Sóc Sơn, gần thiên nhiên, với một nhịp sống chậm và đơn giản hơn.
+
+Leo núi, làm vườn, thực hành Yoga, thiền định và chăm sóc sức khỏe tự nhiên không chỉ là công việc, mà là cách mình sống mỗi ngày.
+
+Mình tin rằng để làm trọn vẹn vai trò người hướng dẫn, chính mình phải sống với những giá trị đó mỗi ngày sâu sắc hơn.`}
+          />
+          <TextCard
+            title="Vì sao mình chọn công việc này"
+            body={`Thú thật là công việc này chọn mình!
+
+Retour không được tạo ra để giúp mọi người làm nhiều hơn. Retour được tạo ra để giúp mọi người hồi phục đủ sâu, để có thể tiếp tục sống, làm việc và cống hiến mà không đánh mất chính mình.`}
+          />
         </div>
       </section>
     </>
