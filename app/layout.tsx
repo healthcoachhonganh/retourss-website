@@ -22,12 +22,12 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: "Retour - Hồi phục hệ thần kinh",
+    default: "Retour - Hồi phục tự nhiên",
     template: "%s | Retour"
   },
   description: site.description,
   openGraph: {
-    title: "Retour - Hồi phục hệ thần kinh",
+    title: "Retour - Hồi phục tự nhiên",
     description: site.description,
     url: site.domain,
     siteName: "Retour",
