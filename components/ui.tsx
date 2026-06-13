@@ -173,10 +173,16 @@ export function CheckList({ items }: { items: string[] }) {
 }
 
 export function TextCard({ title, body }: { title: string; body: string }) {
+  const paragraphs = body.split(/\n\s*\n/).filter(Boolean);
+
   return (
     <article className="rounded-lg border border-forest/10 bg-white/50 p-6 shadow-soft">
       <h3 className="font-serif text-2xl font-medium leading-snug text-forest">{title}</h3>
-      <p className="mt-4 leading-7 text-earth">{body}</p>
+      <div className="mt-4 space-y-4 leading-7 text-earth">
+        {paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
     </article>
   );
 }

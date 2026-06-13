@@ -42,8 +42,26 @@ export default function HongAnhPage() {
       </section>
       <section className="section-pad bg-white/45">
         <div className="container-soft grid gap-5 md:grid-cols-2">
-          <TextCard title="Câu chuyện của tôi" body="Những năm đại học, Hồng Anh học 2 chương trình song song, làm lớp trưởng và tham gia đào tạo nội bộ TGM Next. Sau thời gian cố gắng quá mức, cơ thể bắt đầu lên tiếng bằng mất ngủ và kiệt sức." />
-          <TextCard title="Chứng chỉ & đào tạo" body="Integrative Nutrition Health Coach, Yoga, thiền Anapana, thiền Vipassana và các thực hành hồi phục tự nhiên dựa trên cơ thể." />
+          <TextCard
+            title="Câu chuyện của mình"
+            body={`Những năm đại học, mình học hai chương trình cùng lúc, làm lớp trưởng và tham gia nhiều hoạt động đào tạo, phát triển bản thân.
+
+Bên ngoài mình vẫn đang tiến lên. Nhưng bên trong, cơ thể dần lên tiếng bằng mất ngủ, kiệt sức và cảm giác mất kết nối với chính mình.
+
+Khoảng thời gian đó giúp mình nhận ra một điều quan trọng:
+
+Không phải lúc nào cố gắng nhiều hơn sẽ có kết quả là thành công.
+
+Đôi khi điều chúng ta cần là học cách nghỉ ngơi và hồi phục đúng cách.`}
+          />
+          <TextCard
+            title="Chứng chỉ & đào tạo"
+            body={`Hành trình học tập của mình trải dài từ Yoga cổ điển, Dinh dưỡng tích hợp, thiền định cho đến các phương pháp hồi phục tự nhiên dựa trên sự tin tưởng vào chính cơ thể của mình.
+
+Nhưng điều quan trọng nhất không phải là số lượng chứng chỉ.
+
+Điều quan trọng là những kiến thức đó đã được thể nghiệm qua tiến trình hồi phục tự nhiên của chính mình và hàng trăm giờ đồng hành cùng nhiều học viên.`}
+          />
           <TextCard title="Cuộc sống tại Sóc Sơn" body="Đời sống gần thiên nhiên, nông nghiệp sinh thái và nhịp sống giản dị giúp Hồng Anh tiếp tục thực hành điều mình chia sẻ." />
           <TextCard title="Vì sao tôi chọn công việc này" body="Vì rất nhiều người không cần bị thúc phải mạnh mẽ hơn. Họ cần một nơi đủ an toàn để cơ thể được hồi phục." />
         </div>
