@@ -8,11 +8,11 @@ export default function HomePage() {
         <div className="container-soft grid min-h-[calc(100vh-8rem)] items-center gap-12 py-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="mb-5 text-sm font-medium text-clay">Retour</p>
-            <h1 className="text-balance font-serif text-5xl font-medium leading-[1.16] text-forest md:text-[3.85rem]">
-              Điều hòa hệ thần kinh, ngủ sâu & tái tạo năng lượng thông qua Yoga hồi phục.
+            <h1 className="max-w-3xl text-balance font-serif text-4xl font-medium leading-[1.18] text-forest sm:text-5xl md:text-[3.35rem] xl:text-[3.65rem]">
+              Giúp người làm việc trí óc cường độ cao ngủ sâu hơn, giảm căng thẳng và tái tạo năng lượng để tiếp tục công việc và cuộc sống.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-earth">
-              Dành cho những ai đang chịu áp lực kéo dài và có dấu hiệu quá tải về thể chất, tinh thần hoặc giấc ngủ.
+              Dành cho quản lý và người làm việc trí óc đang khó ngủ, quá tải và không thể nghỉ việc, nhưng biết cơ thể mình đang cần được hồi phục.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <CtaLink href="/hanh-trinh-hoi-phuc">Tìm hiểu chương trình</CtaLink>
