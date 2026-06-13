@@ -4,6 +4,10 @@ import type { ReactNode } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import { mainNav, site } from "@/data/site";
 
+const imageCaptionFrame = "inset-x-5 bottom-5 sm:inset-x-6 sm:bottom-6";
+const imageCaptionSurface =
+  "bg-forest/90 px-4 py-3 text-[0.95rem]/7 font-medium text-ivory ring-1 ring-ivory/12 backdrop-blur-md sm:text-base/7";
+
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-forest/10 bg-ivory/95 shadow-[0_10px_40px_rgba(33,56,42,0.06)] backdrop-blur">
@@ -114,7 +118,7 @@ export function PlaceholderImage({ label }: { label: string }) {
   return (
     <div className="relative min-h-[320px] overflow-hidden rounded-lg bg-oat shadow-soft">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.55),transparent_28%),linear-gradient(135deg,#7b8354,#e8ddc7_52%,#9b7658)]" />
-      <div className="absolute inset-x-8 bottom-8 rounded-md bg-ivory/82 p-5 text-sm leading-6 text-forest backdrop-blur">
+      <div className={`absolute rounded-md ${imageCaptionFrame} ${imageCaptionSurface}`}>
         {label}
       </div>
     </div>
@@ -149,7 +153,7 @@ export function FeatureImage({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-forest/34 via-transparent to-transparent" />
       {caption ? (
-        <figcaption className={`absolute rounded-md p-4 ${captionFrameClassName || "inset-x-6 bottom-6"} ${captionClassName || "bg-ivory/86 text-sm leading-6 text-forest shadow-soft backdrop-blur"}`}>
+        <figcaption className={`absolute rounded-md ${captionFrameClassName || imageCaptionFrame} ${captionClassName || imageCaptionSurface}`}>
           {caption}
         </figcaption>
       ) : null}

@@ -16,6 +16,7 @@ export default function HongAnhPage() {
             alt="Hồng Anh thực hành trong không gian làm việc mộc mạc"
             caption="Không gian thực hành và làm việc của Hồng Anh trong đời sống gần thiên nhiên."
             position="center 42%"
+            captionClassName="bg-forest/[0.92] px-4 py-3 text-base/7 font-semibold text-ivory ring-1 ring-ivory/[0.14] backdrop-blur-md sm:px-5 sm:py-3.5 sm:text-[1.05rem]/7"
           />
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-medium text-clay">Về Hồng Anh</p>
