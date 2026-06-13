@@ -137,14 +137,14 @@ export const testimonials = [
 
 export const caseStudies = [
   {
-    title: "Từ mất ngủ kéo dài đến nhịp nghỉ ổn định hơn",
+    title: "Từ giấc ngủ chập chờn đến buổi tối được lắng nghe cơ thể",
     summary:
-      "Một học viên làm việc trí óc cường độ cao xây lại thói quen nghỉ tối, giảm thời gian trằn trọc và bớt căng hàm."
+      "Chị Ngọc - U40, kinh doanh tự do - từng tự nhận còn yếu hơn cả mẹ U60. Sau 1 tháng, ngủ ngon trở lại và hết đau vai gáy. Không phải vì cố thêm - mà vì mọi động tác đều đến từ sự thư giãn."
   },
   {
-    title: "Giảm quá tải sau giai đoạn chuyển việc",
+    title: "Từ kiệt sức và quá tải đến tỉnh táo - từ những buổi đầu tiên",
     summary:
-      "Hành trình 6 buổi giúp học viên nhận diện tín hiệu sớm của cơ thể và có bộ thực hành ngắn dùng trong ngày."
+      "Chị N. ngủ được ngay tối sau buổi làm quen - trước cả buổi 1 chính thức. Chị Xuân, sau 1 tháng: leo cầu thang đỡ mệt, 1–2 hơi thở là tập trung lại được ngay."
   }
 ];
 
