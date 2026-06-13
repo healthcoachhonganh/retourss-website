@@ -25,12 +25,12 @@ const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: "Retour - Hồi phục tự nhiên",
+    default: "Retour | Giúp người làm việc trí óc ngủ sâu và giảm kiệt sức",
     template: "%s | Retour"
   },
   description: site.description,
   openGraph: {
-    title: "Retour - Hồi phục tự nhiên",
+    title: "Retour | Giúp người làm việc trí óc ngủ sâu và giảm kiệt sức",
     description: site.description,
     url: site.domain,
     siteName: "Retour",

@@ -2,7 +2,7 @@ export const site = {
   name: "Retour",
   domain: "https://retourss.vn",
   description:
-    "Retour giúp những người đang quá tải tìm lại giấc ngủ, sự bình tĩnh và năng lượng sống thông qua hơi thở, cơ thể và nghỉ ngơi sâu.",
+    "Retour giúp người làm việc trí óc cường độ cao ngủ sâu hơn, giảm căng thẳng và tái tạo năng lượng thông qua Yoga hồi phục.",
   cta: "Đánh giá nhu cầu hồi phục",
   contactEmail: "retourss.com@gmail.com",
   zalo: "0949.341.863",
