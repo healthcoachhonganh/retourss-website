@@ -58,9 +58,13 @@ export default function StoriesPage() {
           <h2 className="font-serif text-3xl font-medium leading-tight text-forest">Kết quả đo lường</h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {recoveryStats.map((item) => (
-              <article key={item.number} className="rounded-lg border border-forest/10 bg-white/55 p-6 shadow-soft sm:p-7">
-                <p className="font-serif text-4xl font-semibold leading-none text-forest sm:text-[2.9rem]">{item.number}</p>
-                <p className="mt-5 text-base font-medium leading-7 text-earth">{item.label}</p>
+              <article key={item.number} className="flex h-full min-h-[190px] flex-col rounded-lg border border-forest/10 bg-white/55 p-6 shadow-soft sm:min-h-[214px] sm:p-7">
+                <div className="grid min-h-16 place-items-center text-center sm:min-h-20">
+                  <p className="font-serif text-[2.55rem] font-semibold leading-none text-forest sm:text-[2.9rem]">
+                    {item.number}
+                  </p>
+                </div>
+                <p className="mt-5 text-center text-base font-medium leading-7 text-earth">{item.label}</p>
               </article>
             ))}
           </div>
