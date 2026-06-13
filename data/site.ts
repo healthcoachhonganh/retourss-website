@@ -116,22 +116,22 @@ export const audiences = [
 
 export const testimonials = [
   {
-    name: "Minh Trang",
-    role: "Quản lý dự án",
+    name: "Chị Ngọc",
+    role: "Kinh doanh tự do, Hà Nội",
     quote:
-      "Tôi bắt đầu ngủ dễ hơn sau tuần thứ hai. Điều quý nhất là tôi biết dừng lại trước khi cơ thể phải hét lên."
+      "Cách đây 1 tháng, tôi còn tự nhận mình yếu hơn cả mẹ U60. Mất ngủ, đau mỏi vai gáy, và sợ yoga vì toàn động tác khó. Sau 1 tháng cùng Hồng Anh - tôi ngủ ngon trở lại, vai gáy không còn đau. Mọi động tác đều đến từ sự thư giãn - như mưa dầm thấm lâu, như đang lắng nghe cơ thể mình."
   },
   {
-    name: "Hoàng Nam",
-    role: "Nhà sáng lập",
+    name: "Chị N",
+    role: "Quản lý, Hà Nội",
     quote:
-      "Các bài thực hành không cầu kỳ, nhưng giúp tôi bình tĩnh hơn khi phải ra quyết định liên tục."
+      "Hôm đó tôi đến trong trạng thái kiệt sức hoàn toàn: đau đầu, nhức mắt, ngủ ít vì công việc dồn dập. Đó chưa phải buổi 1 - chỉ là buổi đến để nhờ Hồng Anh hướng dẫn chút. Vậy mà tối hôm đó tôi ngủ được. Sáng hôm sau đến cơ quan, bắt đầu công việc tỉnh táo. Đến buổi 6, tôi cảm nhận rõ sự thả lỏng - hơi thở sâu, đều, nhịp nhàng và tâm trí nhẹ hơn rất nhiều."
   },
   {
-    name: "Thu Hà",
-    role: "Chuyên viên nhân sự",
+    name: "Chị Xuân",
+    role: "Nhân viên văn phòng, TP.HCM",
     quote:
-      "Cổ vai gáy của tôi nhẹ đi rõ rệt. Tôi thấy mình có một cách chăm sóc bản thân thực tế hơn."
+      "Sau hơn 1 tháng luyện tập cùng Hồng Anh, tôi nhận ra sự thay đổi rõ ở nhiều thứ tưởng không liên quan: leo cầu thang đỡ mệt hơn, chỉ cần hít thở 1–2 hơi là tập trung được ngay, gặp căng thẳng thì cảm xúc dịu lại rất nhanh. Và đặc biệt — vào tư thế Savasana là ngủ thôi, không cần cố. Nếu bạn đang căng thẳng và quá tải như tôi trước đây, đây là thứ tôi sẽ kể cho bạn nghe đầu tiên."
   }
 ];
 

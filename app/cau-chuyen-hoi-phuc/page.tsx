@@ -29,8 +29,8 @@ export default function StoriesPage() {
           <SectionHeading title="Chia sẻ từ học viên" />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {testimonials.map((item) => (
-              <article key={item.name} className="rounded-lg border border-forest/10 bg-white/55 p-6 shadow-soft">
-                <p className="leading-7 text-earth">“{item.quote}”</p>
+              <article key={item.name} className="h-full rounded-lg border border-forest/10 bg-white/55 p-6 shadow-soft sm:p-7">
+                <p className="leading-8 text-earth">“{item.quote}”</p>
                 <p className="mt-6 font-medium text-forest">{item.name}</p>
                 <p className="text-sm text-clay">{item.role}</p>
               </article>
