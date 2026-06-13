@@ -82,8 +82,9 @@ export default function HomePage() {
           <FeatureImage
             src="/le-hong-anh.jpg"
             alt="Chân dung Lê Hồng Anh"
-            caption="Lê Hồng Anh, giáo viên Yoga & Health Coach đồng hành cùng Retour."
+            caption="Lê Hồng Anh, giáo viên Yoga & Health Coach, người sáng lập và hướng dẫn chương trình Retour."
             position="center top"
+            captionClassName="bg-forest/90 text-[0.95rem] font-medium leading-7 text-ivory shadow-none ring-1 ring-ivory/12 backdrop-blur-md sm:text-base sm:leading-8"
           />
           <div>
             <SectionHeading eyebrow="Gặp Hồng Anh" title="Thành công không cần đánh đổi bằng sức khỏe." />
