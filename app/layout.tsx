@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Lora } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
@@ -18,6 +19,8 @@ const lora = Lora({
   variable: "--font-lora",
   display: "swap"
 });
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
@@ -47,6 +50,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main>{children}</main>
         <Footer />
       </body>
+      {process.env.NODE_ENV === "production" && gaMeasurementId ? <GoogleAnalytics gaId={gaMeasurementId} /> : null}
     </html>
   );
 }
