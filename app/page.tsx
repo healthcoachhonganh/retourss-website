@@ -86,17 +86,32 @@ export default function HomePage() {
             position="center top"
           />
           <div>
-            <SectionHeading eyebrow="Gặp Hồng Anh" title="Một hành trình trở về với cơ thể, nhịp thở và đời sống gần thiên nhiên." />
-            <p className="mt-6 leading-8 text-earth">
-              Lê Hồng Anh là giáo viên Yoga & Health Coach, sống tại Sóc Sơn. Anh từng trải qua giai đoạn kiệt
-              sức, mất ngủ và mất phương hướng trong những năm đại học sau thời gian cố gắng quá mức: học 2
-              chương trình đại học song song, làm lớp trưởng, tham gia chương trình đào tạo nội bộ TGM Next.
-            </p>
-            <p className="mt-5 leading-8 text-earth">
-              Sau đó, anh bắt đầu hành trình trở về học cách tự chăm sóc và hồi phục tự nhiên với nông nghiệp
-              sinh thái, Integrative Nutrition Health Coach, Yoga, thiền Anapana, thiền Vipassana, và đời sống gần
-              thiên nhiên.
-            </p>
+            <SectionHeading eyebrow="Gặp Hồng Anh" title="Thành công không cần đánh đổi bằng sức khỏe." />
+            <div className="mt-6 space-y-5 leading-8 text-earth">
+              <p>Mình tin rằng sức khỏe không phải là phần thưởng sau thành công.</p>
+              <p>Sức khỏe là nền tảng để một người có thể sống, làm việc và cống hiến một cách bền vững.</p>
+              <p>
+                Nhưng nhiều người trong chúng ta chỉ nhận ra điều đó khi cơ thể bắt đầu lên tiếng: khó ngủ, kiệt
+                sức, mất năng lượng hoặc cảm thấy lạc hướng giữa guồng quay công việc và cuộc sống.
+              </p>
+              <p>Mình cũng từng ở đó.</p>
+              <p>
+                Trong những năm đại học, mình trải qua giai đoạn mất ngủ, kiệt sức và mất phương hướng khi cố gắng
+                theo đuổi quá nhiều mục tiêu cùng lúc. Chính trải nghiệm đó đã đưa mình bước vào hành trình học cách
+                chăm sóc và hồi phục sức khỏe một cách tự nhiên.
+              </p>
+              <p>
+                Từ Yoga, dinh dưỡng tích hợp, thiền định cho đến đời sống gần thiên nhiên, mình dần nhận ra rằng sự
+                hồi phục không bắt đầu từ việc cố gắng nhiều hơn, mà từ việc biết dừng lại, lắng nghe cơ thể và trở về
+                với những điều đơn giản nhất.
+              </p>
+              <p>Retour ra đời từ hành trình đó.</p>
+              <p>
+                Mình tin rằng chúng ta hoàn toàn có thể sống và thành công mà không cần đánh đổi bằng sức khỏe. Mà
+                bắt đầu từ ngủ sâu hơn, thở chậm lại, hồi phục năng lượng và xây dựng một nhịp sống bền vững từ bên
+                trong.
+              </p>
+            </div>
           </div>
         </div>
       </section>
