@@ -84,7 +84,8 @@ export default function HomePage() {
             alt="Chân dung Lê Hồng Anh"
             caption="Lê Hồng Anh, giáo viên Yoga & Health Coach, người sáng lập và hướng dẫn chương trình Retour."
             position="center top"
-            captionClassName="bg-forest/90 text-[0.95rem] font-medium leading-7 text-ivory shadow-none ring-1 ring-ivory/12 backdrop-blur-md sm:text-base sm:leading-8"
+            captionFrameClassName="bottom-4 left-4 right-auto max-w-[calc(100%-2rem)] sm:bottom-5 sm:left-5 sm:max-w-md"
+            captionClassName="bg-forest/90 px-3.5 py-2.5 text-sm font-medium leading-6 text-ivory shadow-none ring-1 ring-ivory/12 backdrop-blur-md sm:px-4 sm:py-3 sm:text-[0.95rem] sm:leading-7"
           />
           <div>
             <SectionHeading eyebrow="Gặp Hồng Anh" title="Thành công không cần đánh đổi bằng sức khỏe." />

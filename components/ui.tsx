@@ -126,13 +126,15 @@ export function FeatureImage({
   alt,
   caption,
   position = "center",
-  captionClassName
+  captionClassName,
+  captionFrameClassName
 }: {
   src: string;
   alt: string;
   caption?: string;
   position?: string;
   captionClassName?: string;
+  captionFrameClassName?: string;
 }) {
   return (
     <figure className="relative min-h-[360px] overflow-hidden rounded-lg bg-oat shadow-soft md:min-h-[520px]">
@@ -147,7 +149,7 @@ export function FeatureImage({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-forest/34 via-transparent to-transparent" />
       {caption ? (
-        <figcaption className={`absolute inset-x-6 bottom-6 rounded-md p-4 ${captionClassName || "bg-ivory/86 text-sm leading-6 text-forest shadow-soft backdrop-blur"}`}>
+        <figcaption className={`absolute rounded-md p-4 ${captionFrameClassName || "inset-x-6 bottom-6"} ${captionClassName || "bg-ivory/86 text-sm leading-6 text-forest shadow-soft backdrop-blur"}`}>
           {caption}
         </figcaption>
       ) : null}
