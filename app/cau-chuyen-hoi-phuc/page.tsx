@@ -7,6 +7,21 @@ export const metadata: Metadata = {
   description: "Case study, chia sẻ từ học viên và kết quả đo lường tại Retour."
 };
 
+const recoveryStats = [
+  {
+    number: "20/20",
+    label: "Học viên cảm nhận thay đổi ngay buổi đầu tiên"
+  },
+  {
+    number: "6 buổi",
+    label: "Thời gian trung bình để thấy kết quả rõ rệt"
+  },
+  {
+    number: "5+",
+    label: "Chiều thay đổi ngoài giấc ngủ được ghi nhận"
+  }
+];
+
 export default function StoriesPage() {
   return (
     <>
@@ -40,7 +55,15 @@ export default function StoriesPage() {
       </section>
       <section className="section-pad bg-oat/45">
         <div className="container-soft">
-          <TextCard title="Kết quả đo lường" body="Retour có thể theo dõi thay đổi qua chất lượng giấc ngủ, mức căng thẳng tự đánh giá, cảm giác cổ vai gáy, năng lượng buổi sáng và khả năng duy trì thực hành." />
+          <h2 className="font-serif text-3xl font-medium leading-tight text-forest">Kết quả đo lường</h2>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {recoveryStats.map((item) => (
+              <article key={item.number} className="rounded-lg border border-forest/10 bg-white/55 p-6 shadow-soft sm:p-7">
+                <p className="font-serif text-4xl font-semibold leading-none text-forest sm:text-[2.9rem]">{item.number}</p>
+                <p className="mt-5 text-base font-medium leading-7 text-earth">{item.label}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </>
