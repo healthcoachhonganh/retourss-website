@@ -15,7 +15,7 @@ export default function StoriesPage() {
           <SectionHeading
             eyebrow="Câu chuyện hồi phục"
             title="Những thay đổi nhỏ nhưng có thể cảm nhận trong giấc ngủ, hơi thở và năng lượng sống."
-            body="Các câu chuyện dưới đây là placeholder nội dung để bạn thay bằng dữ liệu thật khi có học viên và kết quả đo lường cụ thể."
+            body="Không phải phép màu. Không phải cố gắng thêm. Chỉ là cơ thể được trao cơ hội để nghỉ thật sự - lần đầu tiên sau rất lâu."
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {caseStudies.map((item) => (
