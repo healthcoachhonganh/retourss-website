@@ -17,8 +17,8 @@ const recoveryStats = [
     label: "Thời gian trung bình để thấy kết quả rõ rệt"
   },
   {
-    number: "5+",
-    label: "Chiều thay đổi ngoài giấc ngủ được ghi nhận"
+    number: "3+",
+    label: "Thay đổi tích cực ngoài giấc ngủ được học viên ghi nhận"
   }
 ];
 
