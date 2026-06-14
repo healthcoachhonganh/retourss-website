@@ -33,9 +33,13 @@ export default function RecoveryRhythmPage() {
       <section className="section-pad bg-white/45">
         <div className="container-soft">
           <SectionHeading
-            eyebrow="Phương Pháp Hồi Phục"
+            eyebrow="Framework"
             title="SOFT Framework giúp bạn đi từ căng thẳng kéo dài về nghỉ ngơi sâu."
-            body="Phương pháp của Retour không bắt đầu từ việc ép tâm trí phải yên. Chúng tôi bắt đầu từ những tín hiệu cơ thể có thể cảm nhận được."
+            body={`Cách tiếp cận của Retour không bắt đầu từ việc ép tâm trí phải yên.
+
+Chúng mình bắt đầu từ hơi thở, những chuyển động đơn giản và khả năng cảm nhận lại cơ thể.
+
+Khi cơ thể cảm thấy an toàn, sự thư giãn và nghỉ ngơi sâu sẽ xuất hiện một cách tự nhiên.`}
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {softFramework.map((item) => (

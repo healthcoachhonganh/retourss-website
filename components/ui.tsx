@@ -95,7 +95,7 @@ export function SectionHeading({
         <p className="mb-4 text-sm font-medium text-clay">{eyebrow}</p>
       ) : null}
       <h1 className="text-balance font-serif text-4xl font-medium leading-[1.18] text-forest md:text-[3.2rem]">{title}</h1>
-      {body ? <p className="mt-6 text-lg leading-8 text-earth">{body}</p> : null}
+      {body ? <p className="mt-6 whitespace-pre-line text-lg leading-8 text-earth">{body}</p> : null}
     </div>
   );
 }
