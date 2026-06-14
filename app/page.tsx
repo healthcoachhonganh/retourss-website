@@ -15,7 +15,7 @@ export default function HomePage() {
               Dành cho quản lý và người làm việc trí óc đang khó ngủ, quá tải và không thể nghỉ việc, nhưng biết cơ thể mình đang cần được hồi phục.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <CtaLink href="/hanh-trinh-hoi-phuc">Tìm hiểu chương trình</CtaLink>
+              <CtaLink href="/nhip-hoi-phuc">Tìm hiểu chương trình</CtaLink>
               <CtaLink href="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc" tone="light">
                 Làm bài đánh giá 3 phút
               </CtaLink>

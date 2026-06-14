@@ -12,8 +12,7 @@ export const site = {
 export const mainNav = [
   { label: "Trang chủ", href: "/" },
   { label: "Về Retour", href: "/ve-retour" },
-  { label: "Phương pháp hồi phục", href: "/phuong-phap-hoi-phuc" },
-  { label: "Hành trình hồi phục", href: "/hanh-trinh-hoi-phuc" },
+  { label: "Nhịp Hồi Phục", href: "/nhip-hoi-phuc" },
   { label: "Câu chuyện hồi phục", href: "/cau-chuyen-hoi-phuc" },
   { label: "Về Hồng Anh", href: "/ve-hong-anh" },
   { label: "Góc chia sẻ", href: "/goc-chia-se" },
