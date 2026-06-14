@@ -14,7 +14,6 @@ export default function RecoveryRhythmPage() {
       <section className="section-pad bg-ivory">
         <div className="container-soft grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="mb-3 text-sm font-medium text-clay">Nhịp hồi phục</p>
             <SectionHeading
               eyebrow="Chương trình 6 buổi"
               title="Một hành trình có cấu trúc để cơ thể học lại cách nghỉ."
