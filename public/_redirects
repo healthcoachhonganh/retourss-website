@@ -1,0 +1,6 @@
+# Preserved legacy redirects (301 permanent)
+/hanh-trinh-hoi-phuc    /nhip-hoi-phuc    301
+/phuong-phap-hoi-phuc   /nhip-hoi-phuc    301
+
+# SPA fallback (vite-react-ssg pre-renders pages; this handles any unlisted route)
+/*    /index.html    200

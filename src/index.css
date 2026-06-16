@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-inter: "Inter", sans-serif;
+  --font-lora: "Lora", Georgia, serif;
+  --font-sans: var(--font-inter), "Segoe UI", sans-serif;
+  --font-serif: var(--font-lora), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f6ec;
+  color: #1f251e;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: #d9c9a9;
+  color: #21382a;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.section-pad {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.container-soft {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
