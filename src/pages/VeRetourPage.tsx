@@ -41,7 +41,14 @@ export default function VeRetourPage() {
         <div className="container-soft grid gap-5 md:grid-cols-3">
           <TextCard title="Triết lý của Retour" body="Con người vốn đã có khả năng tự hồi phục khi được trở về đúng nhịp của mình." />
           <TextCard title="Vì sao Retour ra đời" body="Retour ra đời từ trải nghiệm kiệt sức, mất ngủ và hành trình học cách tự chăm sóc và hồi phục tự nhiên thông qua hơi thở, cơ thể và nghỉ ngơi sâu." />
-          <TextCard title="Ý nghĩa của từ Retour" body="Retour nghĩa là trở về, trở về với nhịp tự nhiên, với tiến trình hồi phục trong sự thả lỏng và thư giãn." />
+          <TextCard
+            title="Ý nghĩa của từ Retour"
+            body={
+              <>
+                Trong tiếng Pháp <i>Retour</i> mang ý nghĩa là <strong>Trở về</strong>. Tụi mình tin khi trở về với nhịp tự nhiên, chính là lúc tiến trình hồi phục bắt đầu.
+              </>
+            }
+          />
         </div>
       </section>
     </>

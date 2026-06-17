@@ -17,30 +17,72 @@ export default function HomePage() {
         <link rel="canonical" href="https://retourss.com" />
       </Head>
 
+      {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="bg-ivory">
-        <div className="container-soft grid min-h-[calc(100vh-8rem)] items-center gap-12 py-12 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
-            <p className="mb-5 text-sm font-medium text-clay">Retour</p>
-            <h1 className="max-w-3xl text-balance font-serif text-4xl font-medium leading-[1.18] text-forest sm:text-5xl md:text-[3.35rem] xl:text-[3.65rem]">
-              Giúp người làm việc trí óc cường độ cao ngủ sâu hơn, giảm căng thẳng và tái tạo năng lượng để tiếp tục công việc và cuộc sống.
+        <div className="container-soft grid min-h-[calc(100svh-8.5rem)] items-center gap-10 py-16 lg:gap-16 lg:py-20 lg:grid-cols-[1fr_0.9fr]">
+
+          {/* ── Left column: copy ─── */}
+          <div className="max-w-2xl">
+
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-forest/15 bg-white/60 px-4 py-1.5 text-xs font-medium tracking-wide text-clay shadow-[0_1px_6px_rgba(33,56,42,0.06)] backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-olive"></span>
+              Yoga hồi phục &amp; điều hòa hệ thần kinh
+            </div>
+
+            {/* Headline */}
+            <h1 className="mt-6 text-balance font-serif text-[2.05rem] font-medium leading-[1.22] text-forest sm:text-[2.4rem] md:text-[2.75rem]">
+              Ngủ sâu hơn. Dịu hệ thần kinh.{" "}
+              <span className="text-moss">Hồi phục năng lượng</span> để tiếp tục sống và làm việc.
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-earth">
-              Dành cho quản lý và người làm việc trí óc đang khó ngủ, quá tải và không thể nghỉ việc, nhưng biết cơ thể mình đang cần được hồi phục.
+
+            {/* Sub-copy */}
+            <p className="mt-6 max-w-xl text-[1.05rem] leading-[1.85] text-earth">
+              Retour hướng dẫn người làm việc trí óc cường độ cao thả lỏng cơ thể, làm dịu tâm trí và xây lại nhịp hồi phục qua yoga, hơi thở và thư giãn sâu.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <CtaLink href="/nhip-hoi-phuc">Tìm hiểu chương trình</CtaLink>
-              <CtaLink href="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc" tone="light">
-                Làm bài đánh giá 3 phút
+
+            {/* CTAs */}
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <CtaLink href="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc">
+                Đánh giá nhu cầu hồi phục
+              </CtaLink>
+              <CtaLink href="/nhip-hoi-phuc" tone="light">
+                Xem hành trình 6 buổi
               </CtaLink>
             </div>
+
+            {/* Trust indicators */}
+            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-forest/10 pt-7">
+              {[
+                { icon: "✦", label: "20/20 học viên cảm nhận thay đổi từ buổi đầu" },
+                { icon: "✦", label: "6 buổi hướng dẫn trực tiếp" },
+                { icon: "✦", label: "Dành cho người làm việc trí óc quá tải" },
+              ].map((t) => (
+                <div key={t.label} className="flex items-center gap-2 text-[0.8rem] text-earth/80">
+                  <span className="text-[0.55rem] text-olive">{t.icon}</span>
+                  {t.label}
+                </div>
+              ))}
+            </div>
           </div>
-          <FeatureImage
-            src="/hero-hong-anh-soc-son.jpg"
-            alt="Hồng Anh ngồi thiền trong khu vườn xanh tại Sóc Sơn"
-            caption="Một khoảnh khắc thực hành giữa thiên nhiên tại Sóc Sơn."
-          />
+
+          {/* ── Right column: image card ─── */}
+          <div className="relative w-full">
+            <FeatureImage
+              src="/hero-hong-anh-soc-son.jpg"
+              alt="Hồng Anh ngồi thiền trong khu vườn xanh tại Sóc Sơn"
+              caption="Một khoảnh khắc thực hành giữa thiên nhiên tại Sóc Sơn."
+            />
+            {/* Decorative accent ring */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-lg border border-forest/10"
+            />
+          </div>
+
         </div>
       </section>
+      {/* ── / HERO ───────────────────────────────────────────── */}
 
       <section className="section-pad bg-white/45">
         <div className="container-soft grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
