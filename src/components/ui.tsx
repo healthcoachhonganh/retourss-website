@@ -3,14 +3,11 @@ import type { ReactNode } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import { mainNav, site } from "@/data/site";
 
-const imageCaptionFrame = "inset-x-5 bottom-5 sm:inset-x-6 sm:bottom-6";
-const imageCaptionSurface =
-  "bg-forest/90 px-4 py-3 text-[0.95rem]/7 font-medium text-ivory ring-1 ring-ivory/12 backdrop-blur-md sm:text-base/7";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-forest/10 bg-ivory/95 shadow-[0_10px_40px_rgba(33,56,42,0.06)] backdrop-blur">
-      <div className="container-soft flex min-h-[4.75rem] items-center justify-between gap-4 py-3">
+      <div className="container-soft flex min-h-[4.25rem] items-center justify-between gap-3 py-2.5 sm:min-h-[4.75rem] sm:py-3">
         <Link to="/" className="block shrink-0 rounded-md focus:outline-none focus:ring-2 focus:ring-moss/30" aria-label="Retour trang chủ">
           <img
             src="/retour-logo.png"
@@ -18,18 +15,20 @@ export function Header() {
             width={372}
             height={146}
             loading="eager"
-            className="h-12 w-auto object-contain sm:h-14"
+            className="h-9 w-auto object-contain sm:h-12 md:h-14"
           />
         </Link>
 
         <Link
           to="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc"
-          className="inline-flex shrink-0 items-center rounded-full bg-forest px-4 py-2.5 text-xs font-medium leading-none text-ivory shadow-soft transition hover:bg-moss sm:px-5 sm:py-3 sm:text-sm"
+          className="inline-flex shrink-0 items-center gap-1 rounded-full bg-forest px-3.5 py-2 text-[0.72rem] font-medium leading-none text-ivory shadow-soft transition hover:bg-moss sm:gap-2 sm:px-5 sm:py-3 sm:text-sm"
         >
-          {site.cta}
+          <span className="hidden sm:inline">{site.cta}</span>
+          <span className="sm:hidden">Đánh giá ngay</span>
         </Link>
       </div>
-      <nav className="border-t border-forest/10" aria-label="Menu chính">
+      {/* Nav hidden on mobile, scrollable on sm+, centered on lg+ */}
+      <nav className="hidden border-t border-forest/10 md:block" aria-label="Menu chính">
         <div className="container-soft no-scrollbar flex gap-2 overflow-x-auto py-3 text-sm text-forest lg:justify-center">
           {mainNav.map((item) => (
             <Link
@@ -142,28 +141,31 @@ export function FeatureImage({
   alt,
   caption,
   position = "center",
-  captionClassName,
-  captionFrameClassName
+  aspectRatio = "4/3",
+  objectFit = "cover",
 }: {
   src: string;
   alt: string;
   caption?: string;
   position?: string;
-  captionClassName?: string;
-  captionFrameClassName?: string;
+  aspectRatio?: string;
+  objectFit?: "cover" | "contain";
 }) {
   return (
-    <figure className="relative min-h-[360px] overflow-hidden rounded-lg bg-oat shadow-soft md:min-h-[520px]">
-      <img
-        src={src}
-        alt={alt}
-        loading="eager"
-        className="absolute inset-0 h-full w-full object-cover"
-        style={{ objectPosition: position }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-forest/34 via-transparent to-transparent" />
+    <figure>
+      <div className="relative overflow-hidden rounded-lg bg-oat shadow-soft" style={{ aspectRatio }}>
+        <img
+          src={src}
+          alt={alt}
+          loading="eager"
+          className={`absolute inset-0 h-full w-full ${
+            objectFit === "contain" ? "object-contain" : "object-cover"
+          }`}
+          style={{ objectPosition: position }}
+        />
+      </div>
       {caption ? (
-        <figcaption className={`absolute rounded-md ${captionFrameClassName || imageCaptionFrame} ${captionClassName || imageCaptionSurface}`}>
+        <figcaption className="mt-3 text-sm leading-6 text-earth/65">
           {caption}
         </figcaption>
       ) : null}

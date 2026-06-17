@@ -19,7 +19,7 @@ export default function HomePage() {
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="bg-ivory">
-        <div className="container-soft grid min-h-[calc(100svh-8.5rem)] items-center gap-10 py-16 lg:gap-16 lg:py-20 lg:grid-cols-[1fr_0.9fr]">
+        <div className="container-soft grid items-start gap-10 py-12 sm:items-center sm:py-16 lg:min-h-[calc(100svh-8.5rem)] lg:gap-16 lg:py-20 lg:grid-cols-[1fr_0.9fr]">
 
           {/* ── Left column: copy ─── */}
           <div className="max-w-2xl">
@@ -73,10 +73,10 @@ export default function HomePage() {
               alt="Hồng Anh ngồi thiền trong khu vườn xanh tại Sóc Sơn"
               caption="Một khoảnh khắc thực hành giữa thiên nhiên tại Sóc Sơn."
             />
-            {/* Decorative accent ring */}
+            {/* Decorative accent ring — only on sm+ to avoid mobile overflow */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-lg border border-forest/10"
+              className="pointer-events-none absolute -bottom-4 -right-4 -z-10 hidden h-full w-full rounded-lg border border-forest/10 sm:block"
             />
           </div>
 
@@ -139,7 +139,7 @@ export default function HomePage() {
             alt="Chân dung Lê Hồng Anh"
             caption="Lê Hồng Anh, giáo viên Yoga & Health Coach, người sáng lập và hướng dẫn chương trình Retour."
             position="center top"
-            captionFrameClassName="bottom-4 left-4 right-auto max-w-[calc(100%-2rem)] sm:bottom-5 sm:left-5 sm:max-w-md"
+            aspectRatio="1/1"
           />
           <div>
             <SectionHeading eyebrow="Gặp Hồng Anh" title="Thành công không cần đánh đổi bằng sức khỏe." />
