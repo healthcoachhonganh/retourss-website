@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Menu, X } from "lucide-react";
 import { mainNav, site } from "@/data/site";
+import { useState } from "react";
 
 
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-40 border-b border-forest/10 bg-ivory/95 shadow-[0_10px_40px_rgba(33,56,42,0.06)] backdrop-blur">
       <div className="container-soft flex min-h-[4.25rem] items-center justify-between gap-3 py-2.5 sm:min-h-[4.75rem] sm:py-3">
+        {/* Logo */}
         <Link to="/" className="block shrink-0 rounded-md focus:outline-none focus:ring-2 focus:ring-moss/30" aria-label="Retour trang chủ">
           <img
             src="/retour-logo.png"
@@ -19,15 +23,29 @@ export function Header() {
           />
         </Link>
 
-        <Link
-          to="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc"
-          className="inline-flex shrink-0 items-center gap-1 rounded-full bg-forest px-3.5 py-2 text-[0.72rem] font-medium leading-none text-ivory shadow-soft transition hover:bg-moss sm:gap-2 sm:px-5 sm:py-3 sm:text-sm"
-        >
-          <span className="hidden sm:inline">{site.cta}</span>
-          <span className="sm:hidden">Đánh giá ngay</span>
-        </Link>
+        <div className="flex items-center gap-2">
+          {/* CTA — hidden on mobile, visible on sm+ */}
+          <Link
+            to="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc"
+            className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full bg-forest px-5 py-3 text-sm font-medium leading-none text-ivory shadow-soft transition hover:bg-moss"
+          >
+            {site.cta}
+          </Link>
+
+          {/* Hamburger button — mobile only */}
+          <button
+            id="mobile-menu-toggle"
+            className="md:hidden flex h-9 w-9 items-center justify-center rounded-full border border-forest/15 bg-white/60 text-forest transition hover:bg-oat/70 focus:outline-none focus:ring-2 focus:ring-moss/30"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-label={isMenuOpen ? "Đóng menu" : "Mở menu"}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X size={18} strokeWidth={2} /> : <Menu size={18} strokeWidth={2} />}
+          </button>
+        </div>
       </div>
-      {/* Nav hidden on mobile, scrollable on sm+, centered on lg+ */}
+
+      {/* Desktop nav — hidden on mobile, visible from md+ */}
       <nav className="hidden border-t border-forest/10 md:block" aria-label="Menu chính">
         <div className="container-soft no-scrollbar flex gap-2 overflow-x-auto py-3 text-sm text-forest lg:justify-center">
           {mainNav.map((item) => (
@@ -41,6 +59,40 @@ export function Header() {
           ))}
         </div>
       </nav>
+
+      {/* Mobile dropdown — visible only when isMenuOpen, hidden on md+ */}
+      {isMenuOpen && (
+        <div
+          id="mobile-menu"
+          className="md:hidden border-t border-forest/10 bg-ivory/98 shadow-[0_8px_32px_rgba(33,56,42,0.10)]"
+          aria-label="Menu di động"
+        >
+          <nav className="container-soft flex flex-col py-3">
+            {mainNav.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="rounded-lg px-4 py-3.5 text-[0.95rem] font-medium text-forest/80 transition hover:bg-oat/60 hover:text-forest active:bg-oat"
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* CTA inside mobile dropdown */}
+            <div className="mt-3 border-t border-forest/10 pt-4 pb-2">
+              <Link
+                to="/bat-dau-tai-day/danh-gia-muc-do-hoi-phuc"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-forest px-5 py-3.5 text-sm font-medium text-ivory shadow-soft transition hover:bg-moss"
+              >
+                {site.cta}
+                <ArrowRight size={15} />
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
